@@ -9,4 +9,6 @@
 4. get inquier to generate an html file inside the dist folder
 5. begin to write tests in jest
 6. set up classes etc
-    - set up classes based on site breakdown
+    - set up classes based on site breakdown - done
+7. Write HTML and CSS - here
+8. Move HTML/CSS to generateHtml.js
