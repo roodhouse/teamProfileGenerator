@@ -10,5 +10,6 @@
 5. begin to write tests in jest
 6. set up classes etc
     - set up classes based on site breakdown - done
-7. Write HTML and CSS - here
-8. Move HTML/CSS to generateHtml.js
+7. Write HTML and CSS - here - done
+8. Move HTML/CSS to generateHtml.js - here 
+9. at least get the file to create after a run of inquierer 
