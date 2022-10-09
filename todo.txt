@@ -1,8 +1,11 @@
 1. setup directory - done
 2. setup jest
     - ini setup - done
-    - try to run the tests -- here
+    - try to run the tests -- not really working
 3. setup inquierer 
+    - set up starter code for it - done
+    - re-create questions and promises etc 
+        - how to setup inquirer to prompt a new set of questions based on a multiple choice answer? - here
 4. get inquier to generate an html file inside the dist folder
 5. begin to write tests in jest
 6. set up classes etc
