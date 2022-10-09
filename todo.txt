@@ -1,5 +1,7 @@
 1. setup directory - done
 2. setup jest
+    - ini setup - done
+    - try to run the tests -- here
 3. setup inquierer 
 4. get inquier to generate an html file inside the dist folder
 5. begin to write tests in jest
