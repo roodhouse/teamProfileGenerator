@@ -70,28 +70,29 @@ function roleSelection() {
     const managerQ = [
       {
       type: 'input',
-      name: 'name',
+      name: 'mname',
       message: 'Please provide your full name.',
       },
       {
       type: 'input',
-      name: 'id',
+      name: 'mid',
       message: 'Please verify your employee ID.',
       },
       {
       type: 'input',
-      name: 'email',
+      name: 'memail',
       message: 'What is your email address?',
       },
       {
       type: 'input',
-      name: 'office',
+      name: 'moffice',
       message: 'Please provide your office number.'
       }
     ];
 
     inquirer.prompt(managerQ).then((answers) => {
     console.log(answers);
+    writeFile('index2.html', generateHtml(answers))
     })
   };
 
@@ -104,3 +105,8 @@ function internQuestions() {
 }
 
 main();
+
+// .then((answers) => writeFile('index2.html', generateHtml(answers))
+//   .then(() => console.log('File was created'))
+//   .then(() => console.log(answers))
+//   .catch((err) => console.log(err))
