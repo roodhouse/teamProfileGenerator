@@ -66,6 +66,16 @@ function roleSelection() {
 
 function managerQuestions() {
   console.log('You are the manager!');
+
+  const managerQ = {
+    type: 'input',
+    name: 'name',
+    message: 'Please provide your full name.',
+  };
+
+  inquirer.prompt(managerQ).then((answers) => {
+    console.log(answers);
+  })
 };
 
 function engrQuestions() {
