@@ -86,13 +86,22 @@ function roleSelection() {
       type: 'input',
       name: 'moffice',
       message: 'Please provide the office number.'
-      }
+      },
+      {
+        type: 'list',
+        name: 'again',
+        message: 'Would you like to add another team member?',
+        choices: ['Yes', 'No']
+        }
     ];
-
-    inquirer.prompt(managerQ).then((answers) => {
-    console.log(answers);
-    writeFile('index2.html', generateHtml(answers))
-    })
+    
+      inquirer.prompt(managerQ).then((answers) => {
+        if (answers.again === 'Yes' ) {
+          main();
+        } else {
+      console.log(answers);
+      writeFile('index2.html', generateHtml(answers))
+      }})
   };
 
 function engrQuestions() {
