@@ -21,10 +21,10 @@ function generateHtml({name, role, id, email, office, team, github, school}) {
 
         <div id="manager" class="row">
             <div class="col-12 bg-danger">
-                <h3 id="managerName">Name <i class="fa-solid fa-cloud"></i></h3>
-                <p>ID: <span id="managerId"></span></p>
-                <p>Email: <span id="managerEmail"></span></p>
-                <p>Office Number: <span id="managerOffice"></span></p>
+                <h3 id="managerName">${name} <i class="fa-solid fa-cloud"></i></h3>
+                <p>ID: <span id="managerId">${id}</span></p>
+                <p>Email: <span id="managerEmail">${email}</span></p>
+                <p>Office Number: <span id="managerOffice">${office}</span></p>
             </div>
         </div>
 
