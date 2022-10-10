@@ -1,5 +1,5 @@
 // TODO: Create a function to generate markdown for README
-function generateHtml({mname, role, mid, memail, moffice, ename, eid, eemail, team, github, school}) {
+function generateHtml({mname, role, mid, memail, moffice, ename, eid, eemail, team, github, iname, iid, iemail, school}) {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -39,10 +39,10 @@ function generateHtml({mname, role, mid, memail, moffice, ename, eid, eemail, te
 
         <div id="intern" class="row">
             <div class="col-12 bg-danger">
-                <h3 id="internName">Name <i class="fa-solid fa-cloud"></i></h3>
-                <p>ID: <span id="internId"></span></p>
-                <p>Email: <span id="internEmail"></span></p>
-                <p>School: <span id="internSchool"></span></p>
+                <h3 id="internName">${iname} <i class="fa-solid fa-cloud"></i></h3>
+                <p>ID: <span id="internId">${iid}</span></p>
+                <p>Email: <span id="internEmail">${iemail}</span></p>
+                <p>School: <span id="internSchool">${school}</span></p>
             </div>
         </div>
 

@@ -130,6 +130,34 @@ function engrQuestions() {
 
 function internQuestions() {
   console.log('You are an intern!');
+
+  const internQ = [
+    {
+    type: 'input',
+    name: 'iname',
+    message: 'Please provide the full name.',
+    },
+    {
+    type: 'input',
+    name: 'iid',
+    message: 'Please enter the employee ID.',
+    },
+    {
+    type: 'input',
+    name: 'iemail',
+    message: 'What is the email address?',
+    },
+    {
+    type: 'input',
+    name: 'school',
+    message: 'Please provide the school intern is enrolled.'
+    }
+  ];
+
+  inquirer.prompt(internQ).then((answers) => {
+  console.log(answers);
+  writeFile('index2.html', generateHtml(answers))
+  })
 }
 
 main();
