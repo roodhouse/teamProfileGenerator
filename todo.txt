@@ -6,3 +6,6 @@
 5. begin to write tests in jest 
 6. Connect the answers from the inquier to the html file outputted
 7. write more of the quesions
+    - create managerQuestions() .. based on exitHouse()
+    - create engrQuestions()
+    - create internQuestions()
