@@ -42,7 +42,7 @@ const rolePrompt = {
   type: 'list',
   name: 'role',
   message: 'Which type of employee are you adding?',
-  choices: ['Manager', 'Engineer', 'Intern'],
+  choices: ['Manager', 'Engineer', 'Intern', 'Quit'],
 };
 
 function main() {
@@ -53,21 +53,27 @@ function main() {
 function roleSelection() {
   inquirer.prompt(rolePrompt).then((answers) => {
     if (answers.role === 'Manager') {
-      console.log('You are the manager!');
-      console.log(
-        'There is a wolf in front of you; a friendly looking dwarf to the right and an impasse to the left.'
-      );
       managerQuestions();
     } else if (answers.role === 'Engineer') {
-      console.log('You are an engineer!');
       engrQuestions();
     } else if (answers.role === 'Intern') {
-      console.log('You are an intern!');
       internQuestions();
     } else {
       console.log('fail')
     }
   });
+}
+
+function managerQuestions() {
+  console.log('You are the manager!');
+};
+
+function engrQuestions() {
+  console.log('You are an engineer!');
+}
+
+function internQuestions() {
+  console.log('You are an intern!');
 }
 
 main();
