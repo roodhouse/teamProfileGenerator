@@ -64,19 +64,36 @@ function roleSelection() {
   });
 }
 
-function managerQuestions() {
-  console.log('You are the manager!');
+  function managerQuestions() {
+    console.log('You are the manager!');
 
-  const managerQ = {
-    type: 'input',
-    name: 'name',
-    message: 'Please provide your full name.',
-  };
+    const managerQ = [
+      {
+      type: 'input',
+      name: 'name',
+      message: 'Please provide your full name.',
+      },
+      {
+      type: 'input',
+      name: 'id',
+      message: 'Please verify your employee ID.',
+      },
+      {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?',
+      },
+      {
+      type: 'input',
+      name: 'office',
+      message: 'Please provide your office number.'
+      }
+    ];
 
-  inquirer.prompt(managerQ).then((answers) => {
+    inquirer.prompt(managerQ).then((answers) => {
     console.log(answers);
-  })
-};
+    })
+  };
 
 function engrQuestions() {
   console.log('You are an engineer!');
