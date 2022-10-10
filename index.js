@@ -65,28 +65,28 @@ function roleSelection() {
 }
 
   function managerQuestions() {
-    console.log('You are the manager!');
+    console.log('Manager!');
 
     const managerQ = [
       {
       type: 'input',
       name: 'mname',
-      message: 'Please provide your full name.',
+      message: 'Please provide the full name.',
       },
       {
       type: 'input',
       name: 'mid',
-      message: 'Please verify your employee ID.',
+      message: 'Please enter the employee ID.',
       },
       {
       type: 'input',
       name: 'memail',
-      message: 'What is your email address?',
+      message: 'What is the email address?',
       },
       {
       type: 'input',
       name: 'moffice',
-      message: 'Please provide your office number.'
+      message: 'Please provide the office number.'
       }
     ];
 
@@ -97,7 +97,35 @@ function roleSelection() {
   };
 
 function engrQuestions() {
-  console.log('You are an engineer!');
+  console.log('Engineer!');
+
+  const engineerQ = [
+    {
+    type: 'input',
+    name: 'ename',
+    message: 'Please provide the full name.',
+    },
+    {
+    type: 'input',
+    name: 'eid',
+    message: 'Please enter the employee ID.',
+    },
+    {
+    type: 'input',
+    name: 'eemail',
+    message: 'What is the email address?',
+    },
+    {
+    type: 'input',
+    name: 'github',
+    message: 'Please provide the github username.'
+    }
+  ];
+
+  inquirer.prompt(engineerQ).then((answers) => {
+  console.log(answers);
+  writeFile('index2.html', generateHtml(answers))
+  })
 }
 
 function internQuestions() {
