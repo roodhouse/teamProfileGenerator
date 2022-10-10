@@ -36,8 +36,6 @@ console.log(generateHtml)
 //   .then(() => console.log(answers))
 //   .catch((err) => console.log(err))
 // );
-  
-// attempt to create an conditional inquirer
 
 const rolePrompt = {
   type: 'list',
@@ -162,6 +160,7 @@ function internQuestions() {
 }
 
 main();
+
 
 // .then((answers) => writeFile('index2.html', generateHtml(answers))
 //   .then(() => console.log('File was created'))
