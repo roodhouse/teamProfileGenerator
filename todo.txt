@@ -7,3 +7,8 @@
 6. how to not overwrite the entire document? 
     - what other modules does the file system have? 
         - append? 
+
+        first qustion asks which type you would like to add
+        at the end of adding ask if they want to add more
+            if yes then rerun the main()
+                if no then run .then and write the file...

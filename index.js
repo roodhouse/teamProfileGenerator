@@ -1,5 +1,6 @@
 const inquirer           = require('inquirer');
 const {writeFile}        = require('fs').promises;
+const {appendFile}        = require('fs').promises;
 const generateHtml       = require('./src/generateHtml') 
 console.log(generateHtml)
 
