@@ -12,3 +12,6 @@
         at the end of adding ask if they want to add more
             if yes then rerun the main()
                 if no then run .then and write the file...
+
+
+                if no then run a different function that has inquier.prompt().then(answers) - here 

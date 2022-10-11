@@ -35,7 +35,7 @@ console.log(generateHtml)
 //   .then(() => console.log('File was created'))
 //   .then(() => console.log(answers))
 //   .catch((err) => console.log(err))
-// );
+// )
 
 const rolePrompt = {
   type: 'list',
@@ -94,10 +94,10 @@ function roleSelection() {
         choices: ['Yes', 'No']
         }
     ];
-    
+
       inquirer.prompt(managerQ).then((answers) => {
         if (answers.again === 'Yes' ) {
-          main();
+          roleSelection();
         } else {
       console.log(answers);
       writeFile('index2.html', generateHtml(answers))
@@ -169,9 +169,3 @@ function internQuestions() {
 }
 
 main();
-
-
-// .then((answers) => writeFile('index2.html', generateHtml(answers))
-//   .then(() => console.log('File was created'))
-//   .then(() => console.log(answers))
-//   .catch((err) => console.log(err))
