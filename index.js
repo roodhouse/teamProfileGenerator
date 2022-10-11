@@ -1,6 +1,5 @@
 const inquirer           = require('inquirer');
 const {writeFile}        = require('fs').promises;
-const {appendFile}        = require('fs').promises;
 const generateHtml       = require('./src/generateHtml') 
 
 const rolePrompt = {
@@ -20,14 +19,13 @@ function roleSelection() {
     if (answers.role === 'Manager') {
       managerQuestions();
     } else if (answers.role === 'Engineer') {
-      engrQuestions();
+      managerQuestions();
     } else if (answers.role === 'Intern') {
-      internQuestions();
+      managerQuestions();
     } else {
       console.log('fail')
     }
   });
-
 
   function managerQuestions() {
     console.log('Manager!');
@@ -55,83 +53,63 @@ function roleSelection() {
       },
       {
         type: 'list',
-        name: 'again',
-        message: 'Would you like to add another team member?',
+        name: 'eagain',
+        message: 'Would you like to an engineer to this team?',
         choices: ['Yes', 'No']
-        }
+      },
+      {
+        type: 'input',
+        name: 'ename',
+        message: 'Please provide the full name.',
+        },
+        {
+        type: 'input',
+        name: 'eid',
+        message: 'Please enter the employee ID.',
+        },
+        {
+        type: 'input',
+        name: 'eemail',
+        message: 'What is the email address?',
+        },
+        {
+        type: 'input',
+        name: 'github',
+        message: 'Please provide the github username.'
+        },
+        {
+          type: 'list',
+          name: 'iagain',
+          message: 'Would you like to an intern to this team?',
+          choices: ['Yes', 'No']
+        },
+        {
+          type: 'input',
+          name: 'iname',
+          message: 'Please provide the full name.',
+          },
+          {
+          type: 'input',
+          name: 'iid',
+          message: 'Please enter the employee ID.',
+          },
+          {
+          type: 'input',
+          name: 'iemail',
+          message: 'What is the email address?',
+          },
+          {
+          type: 'input',
+          name: 'school',
+          message: 'Please provide the school intern is enrolled.'
+          }
     ];
 
       inquirer.prompt(managerQ).then((answers) => {
-        if (answers.again === 'Yes' ) {
-          roleSelection();
-        } else {
+       
       console.log(answers);
       writeFile('index2.html', generateHtml(answers))
-      }})
+      })
   };
- 
-function engrQuestions() {
-  console.log('Engineer!');
-
-  const engineerQ = [
-    {
-    type: 'input',
-    name: 'ename',
-    message: 'Please provide the full name.',
-    },
-    {
-    type: 'input',
-    name: 'eid',
-    message: 'Please enter the employee ID.',
-    },
-    {
-    type: 'input',
-    name: 'eemail',
-    message: 'What is the email address?',
-    },
-    {
-    type: 'input',
-    name: 'github',
-    message: 'Please provide the github username.'
-    }
-  ];
-
-  inquirer.prompt(engineerQ).then((answers) => {
-  console.log(answers);
-  writeFile('index2.html', generateHtml(answers))
-  })
-}
-
-function internQuestions() {
-  console.log('You are an intern!');
-
-  const internQ = [
-    {
-    type: 'input',
-    name: 'iname',
-    message: 'Please provide the full name.',
-    },
-    {
-    type: 'input',
-    name: 'iid',
-    message: 'Please enter the employee ID.',
-    },
-    {
-    type: 'input',
-    name: 'iemail',
-    message: 'What is the email address?',
-    },
-    {
-    type: 'input',
-    name: 'school',
-    message: 'Please provide the school intern is enrolled.'
-    }
-  ];
-
-  inquirer.prompt(internQ).then((answers) => {
-  console.log(answers);
-  writeFile('index2.html', generateHtml(answers))
-  })
-}
 }
 main();
