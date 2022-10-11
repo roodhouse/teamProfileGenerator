@@ -1,17 +1,8 @@
-2. setup jest
-    - try to run the tests -- not really working
-3. setup inquierer 
-    - re-create questions and promises etc 
-        - how to setup inquirer to prompt a new set of questions based on a multiple choice answer? - stuck here
-5. begin to write tests in jest 
-6. how to not overwrite the entire document? 
-    - what other modules does the file system have? 
-        - append? 
-
-        first qustion asks which type you would like to add
-        at the end of adding ask if they want to add more
-            if yes then rerun the main()
-                if no then run .then and write the file...
-
-
-                if no then run a different function that has inquier.prompt().then(answers) - here 
+            create a string of questions that never breaks out of the block 
+            1. determine role
+            2. goto that section of questions
+            3. at end ask if they want to add another
+                if yes go to the top
+                if no then write the files
+            4. never leave the block when answering yes or no to the above
+            5. at the end of each block have the inquier/answers block all based on the same const for the questions

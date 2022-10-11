@@ -103,7 +103,7 @@ function roleSelection() {
       writeFile('index2.html', generateHtml(answers))
       }})
   };
- // dummy comment
+ 
 function engrQuestions() {
   console.log('Engineer!');
 
